@@ -361,19 +361,19 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 3.75rem;
 }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 1.6875rem;
 }
 
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 h5, .h5 {
@@ -4316,15 +4316,15 @@ input[type=button].btn-block {
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 .card-title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .card-subtitle {
-  margin-top: -0.375rem;
+  margin-top: -0.5rem;
   margin-bottom: 0;
 }
 
@@ -4336,11 +4336,11 @@ input[type=button].btn-block {
   text-decoration: none;
 }
 .card-link + .card-link {
-  margin-left: 1.25rem;
+  margin-left: 1rem;
 }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -4353,7 +4353,7 @@ input[type=button].btn-block {
 }
 
 .card-footer {
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -4362,15 +4362,15 @@ input[type=button].btn-block {
 }
 
 .card-header-tabs {
-  margin-right: -0.625rem;
-  margin-bottom: -0.75rem;
-  margin-left: -0.625rem;
+  margin-right: -0.5rem;
+  margin-bottom: -1rem;
+  margin-left: -0.5rem;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 
 .card-img-overlay {
@@ -11347,11 +11347,6 @@ h3 {
   font-family: "Fira Sans Medium";
 }
 
-h4 {
-  font-size: 20px;
-  font-family: "Noto Sans Regular";
-}
-
 p {
   font-size: 16px;
   font-family: "Noto Sans Regular";
@@ -11369,6 +11364,18 @@ a {
   padding-right: 0;
   font-weight: 700;
   border: 0;
+}
+
+.text-brand {
+  font-family: "Fira Sans";
+}
+
+.tab-separator {
+  border-left: 1px #292a30 solid;
+}
+
+.tab-active {
+  background-color: #292a30;
 }
 
 .btn-outline {
@@ -11412,6 +11419,27 @@ button.sm {
   background: url("../images/background-landing.jpg");
   background-size: 100% 100%;
   background-attachment: fixed;
+}
+
+.card {
+  border: 0;
+}
+
+.card-body {
+  color: #fff;
+  font-family: "Noto Serif", serif;
+  font-size: 1.25rem;
+  border: 0;
+}
+
+.card.bg-primary {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card.bg-secondary {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /*# sourceMappingURL=dist.css.map */
