@@ -48,7 +48,7 @@ $spacers: map-merge(
          (
             $spacer * 8,
          )
-         // 128px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+         // 128px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    ),
    $spacers
 );
@@ -152,3 +152,24 @@ $theme-colors: map-merge(
    ),
    $theme-colors
 );
+
+//fonts add @import ??
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Noto+Sans:wght@400;700&family=Noto+Serif&display=swap");
+
+$font-family-sans-serif: "Noto Sans", sans-serif, "Apple Color Emoji",
+   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif: "Noto Serif", serif;
+$font-family-brand: "Fira Sans";
+$font-family-base: $font-family-sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+//Link designs
+$link-color: theme-color("primary");
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15%;
