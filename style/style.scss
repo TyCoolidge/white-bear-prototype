@@ -5,10 +5,11 @@
 //    font-family: "Fira Sans Medium";
 // }
 // //card titles on landing page
-// h2 {
-//    font-size: 27px;
-//    font-family: $font-family-serif;
-// }
+h2 {
+   font-size: 27px;
+   font-family: $font-family-serif;
+   color: black;
+}
 // //white bear logo text in app
 // h3 {
 //    font-size: 20px;
@@ -20,11 +21,12 @@
 // //    font-family: "Noto Sans Regular";
 // // }
 // //stardard text
-// p {
-//    font-size: 16px;
-//    font-family: "Noto Sans Regular";
-//    text-align: none;
-// }
+p {
+   font-size: 16px;
+   font-family: "Noto Sans Regular";
+   text-align: none;
+   color: black;
+}
 
 // button,
 // a {
@@ -38,6 +40,11 @@
    font-weight: $font-weight-bold;
    border: 0;
 }
+
+.btn-group .btn {
+   font-weight: $font-weight-normal;
+}
+
 .text-brand {
    font-family: $font-family-brand;
 }
@@ -54,6 +61,20 @@
 .btn-outline {
    border-width: 2px;
 }
+
+// .btn-lg {
+//    padding-left: map-get($spacers, 6);
+//    padding-right: map-get($spacers, 6);
+//    padding-top: map-get($spacers, 2);
+//    padding-bottom: map-get($spacers, 2);
+// }
+// .btn-md {
+//    padding-top: map-get($spacers, 2);
+//    padding-bottom: map-get($spacers, 2);
+//    padding-left: map-get($spacers, 4);
+//    padding-right: map-get($spacers, 4);
+// }
+
 .btn-button.btn {
    padding: map-get($map: $spacers, $key: 4);
 }
