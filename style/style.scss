@@ -10,20 +10,24 @@ h2 {
    font-family: $font-family-serif;
    color: black;
 }
+
 // //white bear logo text in app
 // h3 {
 //    font-size: 20px;
 //    font-family: "Fira Sans Medium";
 // }
 // //centered text above card & size of text on cards (except in "All cards" view, 16px)
-// h4 {
-//    font-size: 20px;
-//    font-family: "Noto Sans Regular";
-// }
+
+//get h4 text style to function
+h4 {
+   font-family: $font-family-sans-serif;
+   font-weight: $font-weight-normal;
+}
+
 // //stardard text
 p {
    font-size: 16px;
-   font-family: "Noto Sans Regular";
+   font-family: $font-family-sans-serif;
    text-align: none;
    color: black;
 }
@@ -124,4 +128,24 @@ button.btn-danger {
 .card.bg-secondary {
    border-top-left-radius: 0;
    border-top-right-radius: 0;
+}
+
+//text area style
+textarea {
+   width: 100%;
+   background-color: transparent;
+   //gets rid of border outline
+   border: none;
+   //shows scroll bar for users
+   overflow: auto;
+   //gets rid of highlighted box
+   outline: none;
+   //gets rid of two lines that drag down box
+   /* https://stackoverflow.com/a/17110012 */
+   resize: none;
+   //add function to automatically focus user on textarea
+}
+
+.card textarea {
+   color: $white;
 }

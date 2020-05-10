@@ -7,6 +7,7 @@
       <title>Review Cards</title>
    </head>
    <body>
+      <div class="bg-success w-100 py-4"><p class="lead">Card created!</p></div>
       <div class="container">
          <div class="row">
             <div
@@ -56,13 +57,11 @@
                </h4>
 
                <!--TOP CARD FOR FUTURE PAGES-->
-               <div class="mb-5">
+               <div class="mb-2">
                   <div class="card bg-primary col-md-12">
-                     <div class="card-body" style="color: white;">
-                        Far far away, behind the word mountains, far from the
-                        countries Vokalia and Consonantia, there live the blind
-                        texts. Separated they live in Bookmarksgrove right at
-                        the coast of the Semantics, a large
+                     <div class="card-body">
+                        <!--add rows -->
+                        <textarea rows="7"></textarea>
                      </div>
                   </div>
 
@@ -75,6 +74,10 @@
                      </div>
                   </div>
                </div>
+               <!-- character count-->
+               <p class="float-right mb-5">0/240</p>
+               <!-- create margin between card and buttons -->
+               <div class="clearfix"></div>
                <!-- make Button link to next page-->
                <a
                   href="create-answer.html"
@@ -85,7 +88,7 @@
                   Back to answer
                </a>
                <div class="float-right">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn btn-primary btn-lg">
                      <img
                         src="/icons/save.svg"
                         width="20px"
