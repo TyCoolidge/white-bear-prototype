@@ -149,3 +149,9 @@ textarea {
 .card textarea {
    color: $white;
 }
+
+//added space because lead is nested in .bg-success
+.bg-success,
+.bg-danger p.lead {
+   color: $white;
+}

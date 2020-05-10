@@ -386,7 +386,7 @@ h6, .h6 {
 
 .lead {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .display-1 {
@@ -11436,6 +11436,11 @@ textarea {
 }
 
 .card textarea {
+  color: #fff;
+}
+
+.bg-success,
+.bg-danger p.lead {
   color: #fff;
 }
 

@@ -7,7 +7,39 @@
       <title>Review Cards</title>
    </head>
    <body>
-      <div class="bg-success w-100 py-4"><p class="lead">Card created!</p></div>
+      <!-- created success overlay -->
+      <div
+         class="bg-success w-100 py-4 d-none justify-content-center fixed-top"
+         id="overlay-success"
+      >
+         <img
+            src="/icons/success.svg"
+            width="28px"
+            style="margin-top: -1px;"
+            class="mr-2"
+         />
+         <!-- find out what broke this -->
+         <p class="lead" style="color: white;">Card created!</p>
+      </div>
+
+      <!-- created danger overlay -->
+      <div
+         class="bg-danger w-100 py-4 d-none justify-content-center fixed-top"
+         id="overlay-danger"
+      >
+         <img
+            src="/icons/error.svg"
+            width="28px"
+            style="margin-top: -1px;"
+            class="mr-2"
+         />
+         <!-- find out what broke this -->
+         <p class="lead" style="color: white;">
+            Oops! Our bad. Please try again.
+         </p>
+      </div>
+
+      <!-- comment just to split code for organization-->
       <div class="container">
          <div class="row">
             <div
@@ -75,20 +107,24 @@
                   </div>
                </div>
                <!-- character count-->
-               <p class="float-right mb-5">0/240</p>
+               <p class="float-right mb-5 text-muted">0/240</p>
                <!-- create margin between card and buttons -->
                <div class="clearfix"></div>
                <!-- make Button link to next page-->
-               <a
-                  href="create-answer.html"
+               <button
                   type="button"
                   class="btn btn-link"
                   style="float: left;"
+                  id="create-error"
                >
                   Back to answer
-               </a>
+               </button>
                <div class="float-right">
-                  <button type="button" class="btn btn-primary btn-lg">
+                  <button
+                     type="button"
+                     class="btn btn-primary btn-lg"
+                     id="save-imagery"
+                  >
                      <img
                         src="/icons/save.svg"
                         width="20px"
@@ -102,4 +138,9 @@
          </div>
       </div>
    </body>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+   ></script>
+   <script src="script.js" defer></script>
 </html>
