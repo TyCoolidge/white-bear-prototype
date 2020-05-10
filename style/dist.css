@@ -11345,10 +11345,6 @@ p {
   color: black;
 }
 
-.nav-bar {
-  font-weight: 400;
-}
-
 .btn-link {
   padding-left: 0;
   padding-right: 0;
@@ -11382,9 +11378,9 @@ p {
 
 button.btn-primary {
   background-color: #3d3e47;
-  border: 2px;
+  border-width: 1px;
   border-right: 2px;
-  border-color: black;
+  border-color: #3d3e47;
 }
 
 button.btn-success:hover.focus.active {

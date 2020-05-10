@@ -81,9 +81,9 @@ p {
 
 button.btn-primary {
    background-color: $gray-700;
-   border: 2px;
+   border-width: 1px;
    border-right: 2px;
-   border-color: black;
+   border-color: $gray-700;
 }
 
 button.btn-success:hover.focus.active {
