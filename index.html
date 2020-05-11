@@ -8,71 +8,111 @@
    </head>
    <body class="background-image">
       <div class="container mt-7">
-         <div class="col-xl-0 offset-xl-0">
-            <!--First card, needs correct fonts and margins, also needs drop down when clicking sign up-->
-            <div class="row mb-8">
-               <div class="d-flex justify-content-start">
-                  <img
-                     class="img-responsive mr-5"
-                     src="/images/logo-landing.png"
-                     alt="White Bear Logo"
-                     style="width: 30%;"
-                  />
-                  <h1 style="color: white;">White Bear</h1>
-               </div>
-            </div>
-         </div>
-         <!--REMINDER to make mobile friendly get text to reappear-->
-         <div class="row mt-6">
-            <div class="col-xl-4 offset-xl-1">
-               <div class="card col-md-12">
-                  <div class="card-body">
-                     <h2 class="card-title">
-                        Nice to meet you
-                     </h2>
-                     <p style="font-size: 13px;" class="mb-5">
-                        Sign up for White Bear. Free forever.
-                     </p>
-                     <button type="button" class="btn btn-success btn-block">
-                        Sign up
-                     </button>
+         <div class="row">
+            <div class="col-12">
+               <!-- NEED TO MAKE MOBILE FRIENDLY <div
+               class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
+            > -->
+               <!--First card, needs correct fonts and margins, also needs drop down when clicking sign up-->
+               <div class="row mb-8">
+                  <div class="d-flex justify-content-start">
+                     <img
+                        class="img-responsive mr-5"
+                        src="/images/logo-landing.png"
+                        alt="White Bear Logo"
+                        style="width: 30%;"
+                     />
+                     <h1 style="color: white;">White Bear</h1>
                   </div>
                </div>
-            </div>
 
-            <!--Second card that needs fonts and margins as well-->
-            <div class="col-xl-4 offset-xl-1">
-               <div class="card col-md-12">
-                  <div class="card-body">
-                     <h2 class="card-title">
-                        Welcome back
-                     </h2>
-                     <p style="font-size: 13px;" class="mb-5">
-                        Log in with your email address and password.
-                     </p>
-                     <form>
-                        <h3 class="text-muted">Email address</h3>
-                        <input
-                           class="form-control thick-border"
-                           type="text"
-                           required
-                        />
-                        <h3 class="text-muted">Password</h3>
-                        <input
-                           class="form-control thick-border"
-                           type="password"
-                           required
-                        />
-                        <div class="float-right">
-                           <a
-                              href="create-answer.html"
-                              type="button"
-                              class="btn btn-success mt-5 btn-lg"
+               <!--REMINDER to make mobile friendly get text to reappear & fix margins for textbox-->
+               <div class="row mt-6">
+                  <div class="col-xl-4 offset-xl-1 mb-5">
+                     <div class="card col-md-12">
+                        <div class="card-body">
+                           <h2 class="card-title">
+                              Nice to meet you
+                           </h2>
+                           <p style="font-size: 13px;" class="mb-1">
+                              Sign up for White Bear. Free forever.
+                           </p>
+                           <p
+                              style="color: blue; font-size: 13px;"
+                              class="mb-5"
+                              id="signUpText"
                            >
-                              Log in
-                           </a>
+                              Let's get you signed up.
+                           </p>
+
+                           <button
+                              type="button"
+                              class="btn btn-success btn-block my-4"
+                              id="signup"
+                           >
+                              Sign up
+                           </button>
+                           <!-- Dragdown menu once click on signup -->
+                           <div id="dragdown">
+                              <h3 class="text-muted">Email address</h3>
+                              <input
+                                 class="form-control thick-border mb-4"
+                                 type="text"
+                                 required
+                              />
+                              <h3 class="text-muted">Create a password</h3>
+                              <input
+                                 class="form-control thick-border mb-5"
+                                 type="password"
+                                 required
+                              />
+                              <a
+                                 href="create-answer.html"
+                                 type="button"
+                                 class="btn btn-success btn-block mb-4"
+                              >
+                                 Let's go!
+                              </a>
+                           </div>
                         </div>
-                     </form>
+                     </div>
+                  </div>
+
+                  <!--Second card that needs fonts and margins as well-->
+                  <div class="col-xl-4 offset-xl-1">
+                     <div class="card col-md-12">
+                        <div class="card-body">
+                           <h2 class="card-title">
+                              Welcome back
+                           </h2>
+                           <p style="font-size: 13px;" class="mb-5">
+                              Log in with your email address and password.
+                           </p>
+                           <form>
+                              <h3 class="text-muted">Email address</h3>
+                              <input
+                                 class="form-control thick-border mb-4"
+                                 type="text"
+                                 required
+                              />
+                              <h3 class="text-muted">Password</h3>
+                              <input
+                                 class="form-control thick-border"
+                                 type="password"
+                                 required
+                              />
+                              <div class="float-right">
+                                 <a
+                                    href="create-answer.html"
+                                    type="button"
+                                    class="btn btn-success mt-5 btn-lg"
+                                 >
+                                    Log in
+                                 </a>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>

@@ -15,4 +15,13 @@ $(document).ready(function () {
       $("#showButton").click(function () {
          $("#deleteCard").toggle("#deleteCard");
       });
+
+   $("#dragdown, #signUpText").hide(),
+      $("#signup").click(function () {
+         $("#dragdown, #signUpText").slideDown("#dragdown, #signUpText");
+      });
+
+   $("#signup").click(function () {
+      $("#signup").hide();
+   });
 });
