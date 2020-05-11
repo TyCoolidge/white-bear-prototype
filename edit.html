@@ -1,0 +1,191 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link rel="stylesheet" href="style/dist.css" />
+      <title>Review Cards</title>
+   </head>
+   <body>
+      <!-- created success overlay -->
+      <div
+         class="bg-success w-100 py-4 d-none justify-content-center fixed-top"
+         id="overlay-success"
+      >
+         <img
+            src="/icons/success.svg"
+            width="28px"
+            style="margin-top: -1px;"
+            class="mr-2"
+         />
+         <!-- find out what broke this -->
+         <p class="lead" style="color: white;">Card created!</p>
+      </div>
+
+      <!-- created danger overlay -->
+      <div
+         class="bg-danger w-100 py-4 d-none justify-content-center fixed-top"
+         id="overlay-danger"
+      >
+         <img
+            src="/icons/error.svg"
+            width="28px"
+            style="margin-top: -1px;"
+            class="mr-2"
+         />
+         <!-- find out what broke this -->
+         <p class="lead" style="color: white;">
+            Oops! Our bad. Please try again.
+         </p>
+      </div>
+
+      <!-- comment just to split code for organization-->
+      <div class="container">
+         <div class="row">
+            <div
+               class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
+            >
+               <div>
+                  <img
+                     src="icons/logo-app.svg"
+                     width="32px;"
+                     alt="White Bear Logo"
+                  />
+
+                  <h3 class="d-inline btn-group">White Bear</h3>
+                  <a href="index.html" class="btn btn-link float-right"
+                     >Log out</a
+                  >
+               </div>
+
+               <!--Navigation bar-->
+               <div
+                  class="btn-group nav-bar"
+                  role="navigation"
+                  style="width: 100%;"
+                  aria-label="navigation"
+               >
+                  <a
+                     href="create-answer.html"
+                     type="button"
+                     class="btn btn-secondary"
+                  >
+                     Create new
+                  </a>
+                  <a
+                     href="review-answer.html"
+                     type="button"
+                     class="btn btn-secondary tab-separator"
+                  >
+                     Review
+                  </a>
+                  <a
+                     href="all-cards.html"
+                     type="button"
+                     class="btn btn-secondary tab-separator tab-active"
+                  >
+                     All cards
+                  </a>
+               </div>
+
+               <h4 class="my-4 text-center text-muted">
+                  Edit card
+               </h4>
+
+               <!--TOP CARD FOR FUTURE PAGES-->
+               <div class="mb-2">
+                  <div class="card bg-primary col-md-12">
+                     <div class="card-body">
+                        <!--add rows -->
+                        <textarea rows="7" autofocus="autofocus"></textarea>
+                     </div>
+                  </div>
+
+                  <div class="card bg-secondary col-md-12">
+                     <div class="card-body">
+                        Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts. Separated they live in Bookmarksgrove right at
+                        the coast of the Semantics, a large
+                     </div>
+                  </div>
+               </div>
+               <!-- character count-->
+               <p class="float-right mb-5 text-muted">0/240</p>
+               <!-- create margin between card and buttons -->
+               <div class="clearfix"></div>
+               <!-- make Button link to next page-->
+               <a
+                  href="all-cards.html"
+                  type="button"
+                  class="btn btn-link"
+                  style="float: left;"
+               >
+                  Discard changes
+               </a>
+               <div class="float-right">
+                  <button
+                     type="button"
+                     class="btn btn-primary btn-lg"
+                     id="save-imagery"
+                  >
+                     <img
+                        src="/icons/save.svg"
+                        width="22px"
+                        style="margin-top: -1px;"
+                        class="mr-2"
+                     />
+                     Save
+                  </button>
+               </div>
+               <div class="clearfix"></div>
+               <div class="container">
+                  <div class="row">
+                     <div class="col">
+                        <h4 class="mt-5 mb-3 text-center text-muted">
+                           Card properties
+                        </h4>
+                        <div class="row">
+                           <div>
+                              <p class="mb-2">Created on:</p>
+                              <p class="mb-2">Last attempt:</p>
+                              <p class="mb-2">Next attempt:</p>
+                              <p class="mb-2">Consecutives:</p>
+                           </div>
+
+                           <div class="col-sm">
+                              <p class="mb-2">Dec. 21, 2019</p>
+                              <p class="mb-2">Dec. 31, 2019</p>
+                              <p class="mb-2">Jul. 14, 2020</p>
+                              <p class="mb-2">4</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Need to fix margins as well as checkbox color -->
+               <div class="row">
+                  <label id="labelPadding"
+                     ><input
+                        name="Checkbox1"
+                        type="checkbox"
+                        id="showButton"
+                        class="ml-2" />Show delete button <br />
+                     <a href="all-cards.html"
+                        ><input
+                           class="btn btn-outline-danger"
+                           type="button"
+                           id="deleteCard"
+                           value="Delete this Card" /></a
+                  ></label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+   ></script>
+   <script src="script.js" defer></script>
+</html>
