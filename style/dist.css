@@ -11338,6 +11338,10 @@ h2 {
   color: black;
 }
 
+h3 {
+  font-weight: 400;
+}
+
 h4 {
   font-family: "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
@@ -11433,6 +11437,12 @@ textarea {
   outline: none;
   /* https://stackoverflow.com/a/17110012 */
   resize: none;
+}
+
+.thick-border {
+  border-width: 2px;
+  outline: none;
+  border-color: #80818d;
 }
 
 .card textarea {

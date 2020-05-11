@@ -19,6 +19,9 @@ h2 {
 // //centered text above card & size of text on cards (except in "All cards" view, 16px)
 
 //get h4 text style to function
+h3 {
+   font-weight: $font-weight-normal;
+}
 h4 {
    font-family: $font-family-sans-serif;
    font-weight: $font-weight-normal;
@@ -146,6 +149,12 @@ textarea {
    //add function to automatically focus user on textarea
 }
 
+.thick-border {
+   border-width: $border-width;
+   outline: none;
+   border-color: $gray-400;
+}
+
 .card textarea {
    color: $white;
 }
@@ -155,3 +164,5 @@ textarea {
 .bg-danger p.lead {
    color: $white;
 }
+
+//space between button and input
