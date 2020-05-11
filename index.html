@@ -9,27 +9,33 @@
    <body class="background-image">
       <div class="container mt-7">
          <div class="row">
-            <div class="col-12">
+            <div class="col">
                <!-- NEED TO MAKE MOBILE FRIENDLY <div
                class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
             > -->
                <!--First card, needs correct fonts and margins, also needs drop down when clicking sign up-->
-               <div class="row mb-8">
-                  <div class="d-flex justify-content-start">
-                     <img
-                        class="img-responsive mr-5"
-                        src="/images/logo-landing.png"
-                        alt="White Bear Logo"
-                        style="width: 30%;"
-                     />
-                     <h1 style="color: white;">White Bear</h1>
+               <div class="row mb-3">
+                  <div class="col">
+                     <div class="d-flex justify-content-start">
+                        <img
+                           class="img-responsive mr-5 img-size"
+                           src="/images/logo-landing.png"
+                           alt="White Bear Logo"
+                           width="135px;"
+                        />
+                        <h1 class="ml-3 h1-size" style="color: white;">
+                           White Bear
+                        </h1>
+                     </div>
                   </div>
                </div>
 
                <!--REMINDER to make mobile friendly get text to reappear & fix margins for textbox-->
-               <div class="row mt-6">
-                  <div class="col-xl-4 offset-xl-1 mb-5">
-                     <div class="card col-md-12">
+               <div class="row mt-5">
+                  <div
+                     class="col-xl-4 offset-xl-1 mb-5 col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-sm-6"
+                  >
+                     <div class="card">
                         <div class="card-body">
                            <h2 class="card-title">
                               Nice to meet you
@@ -47,20 +53,20 @@
 
                            <button
                               type="button"
-                              class="btn btn-success btn-block my-4"
+                              class="btn btn-success btn-block mt-5"
                               id="signup"
                            >
                               Sign up
                            </button>
                            <!-- Dragdown menu once click on signup -->
                            <div id="dragdown">
-                              <h3 class="text-muted">Email address</h3>
+                              <h4 class="text-muted">Email address</h4>
                               <input
                                  class="form-control thick-border mb-4"
                                  type="text"
                                  required
                               />
-                              <h3 class="text-muted">Create a password</h3>
+                              <h4 class="text-muted">Create a password</h4>
                               <input
                                  class="form-control thick-border mb-5"
                                  type="password"
@@ -69,7 +75,7 @@
                               <a
                                  href="create-answer.html"
                                  type="button"
-                                 class="btn btn-success btn-block mb-4"
+                                 class="btn btn-success btn-block"
                               >
                                  Let's go!
                               </a>
@@ -79,8 +85,8 @@
                   </div>
 
                   <!--Second card that needs fonts and margins as well-->
-                  <div class="col-xl-4 offset-xl-1">
-                     <div class="card col-md-12">
+                  <div class="col-xl-4 offset-xl-1 col-lg-5 col-md-5 col-sm-6">
+                     <div class="card">
                         <div class="card-body">
                            <h2 class="card-title">
                               Welcome back
@@ -89,13 +95,13 @@
                               Log in with your email address and password.
                            </p>
                            <form>
-                              <h3 class="text-muted">Email address</h3>
+                              <h4 class="text-muted">Email address</h4>
                               <input
                                  class="form-control thick-border mb-4"
                                  type="text"
                                  required
                               />
-                              <h3 class="text-muted">Password</h3>
+                              <h4 class="text-muted">Password</h4>
                               <input
                                  class="form-control thick-border"
                                  type="password"

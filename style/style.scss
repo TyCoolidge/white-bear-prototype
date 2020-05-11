@@ -1,26 +1,40 @@
 // //text font type and size 'dont forget to add font family'
 // //white bear logo on landing page
-// h1 {
-//    font-size: 60px;
-//    font-family: "Fira Sans Medium";
-// }
-// //card titles on landing page
+@media screen and (max-width: 640px) {
+   .img-size {
+      max-width: 110px;
+      max-height: 85px;
+   }
+   .h1-size {
+      font-size: 50px;
+   }
+}
+
+@media screen and (max-width: 1007px) {
+   .img-size {
+      max-width: 120px;
+      max-height: 90px;
+   }
+   .h1-size {
+      font-size: 55px;
+   }
+}
+
+//add more @media
+
+h1 {
+   font-weight: $font-weight-normal;
+   $font-family-brand: "Fira Sans";
+}
 h2 {
    font-size: 27px;
    font-family: $font-family-serif;
    color: black;
 }
 
-// //white bear logo text in app
-// h3 {
-//    font-size: 20px;
-//    font-family: "Fira Sans Medium";
-// }
-// //centered text above card & size of text on cards (except in "All cards" view, 16px)
-
-//get h4 text style to function
 h3 {
    font-weight: $font-weight-normal;
+   $font-family-brand: "Fira Sans";
 }
 h4 {
    font-family: $font-family-sans-serif;
@@ -105,8 +119,9 @@ button.btn-danger {
 
 .background-image {
    background: url("../images/background-landing.jpg");
-   background-size: 100% 100%;
-   background-attachment: fixed;
+   background-position: center;
+   // background-attachment: fixed;
+   background-repeat: no-repeat;
 }
 
 //card styles
