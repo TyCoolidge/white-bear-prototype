@@ -139,45 +139,51 @@
                   </button>
                </div>
                <div class="clearfix"></div>
-               <div class="container">
-                  <div class="row">
-                     <div class="col">
-                        <h4 class="mt-5 mb-3 text-center text-muted">
-                           Card properties
-                        </h4>
-                        <div class="row">
-                           <div>
-                              <p class="mb-2">Created on:</p>
-                              <p class="mb-2">Last attempt:</p>
-                              <p class="mb-2">Next attempt:</p>
-                              <p class="mb-2">Consecutives:</p>
-                           </div>
 
-                           <div class="col-sm">
-                              <p class="mb-2">Dec. 21, 2019</p>
-                              <p class="mb-2">Dec. 31, 2019</p>
-                              <p class="mb-2">Jul. 14, 2020</p>
-                              <p class="mb-2">4</p>
-                           </div>
-                        </div>
-                     </div>
+               <h4 class="mt-5 mb-3 text-center text-muted">
+                  Card properties
+               </h4>
+               <div class="row mb-1">
+                  <div class="col-4">
+                     <p class="mb-2 text-muted">Created on:</p>
+                     <p class="mb-2 text-muted">Last attempt:</p>
+                     <p class="mb-2 text-muted">Next attempt:</p>
+                     <p class="mb-2 text-muted">Consecutives:</p>
+                  </div>
+
+                  <div class="col-6 ml-5">
+                     <p class="mb-2">Dec. 21, 2019</p>
+                     <p class="mb-2">Dec. 31, 2019</p>
+                     <p class="mb-2">Jul. 14, 2020</p>
+                     <p class="mb-2">4</p>
                   </div>
                </div>
+
                <!-- Need to fix margins as well as checkbox color -->
                <div class="row">
-                  <label id="labelPadding"
-                     ><input
-                        name="Checkbox1"
-                        type="checkbox"
-                        id="showButton"
-                        class="ml-2" />Show delete button <br />
+                  <div class="col">
+                     <form>
+                        <div class="custom-control custom-checkbox">
+                           <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck"
+                              name="example1"
+                           />
+                           <label class="custom-control-label" for="customCheck"
+                              >Show delete button</label
+                           >
+                        </div>
+                     </form>
+
                      <a href="all-cards.html"
                         ><input
                            class="btn btn-outline-danger"
                            type="button"
                            id="deleteCard"
-                           value="Delete this Card" /></a
-                  ></label>
+                           value="Delete this Card"
+                     /></a>
+                  </div>
                </div>
             </div>
          </div>

@@ -180,4 +180,7 @@ textarea {
    color: $white;
 }
 
-//padding between checkbox
+//checkbox styling
+.custom-control-input:checked ~ .custom-control-label::before {
+   background-color: $primary;
+}

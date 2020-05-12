@@ -12,7 +12,7 @@ $(document).ready(function () {
    // });
 
    $("#deleteCard").hide(),
-      $("#showButton").click(function () {
+      $("#customCheck").click(function () {
          $("#deleteCard").toggle("#deleteCard");
       });
 
