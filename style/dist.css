@@ -11478,7 +11478,7 @@ textarea {
   color: #fff;
 }
 
-.custom-control-input:checked ~ .custom-control-label::before {
+.custom-control-input:checked ~ .custom-control-label::after {
   background-color: #52535f;
 }
 

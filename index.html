@@ -65,25 +65,40 @@
                                  class="form-control thick-border"
                                  type="text"
                                  required
-                                 id="email1"
+                                 id="emailRequired"
                               />
                               <p
                                  id="warningEmail"
                                  class="mb-4 invalid-feedback"
                                  style="display: none; font-size: 13px;"
                               >
-                                 Please enter a valid email address
+                                 Please enter your email address.
                               </p>
                               <h4 class="text-muted">Create a password</h4>
                               <input
-                                 class="form-control thick-border mb-5"
+                                 class="form-control thick-border mb-1"
                                  type="password"
                                  required
+                                 id="requiredPassword"
                               />
+                              <p
+                                 id="warningPassword"
+                                 class="mb-4 invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Please enter your password.
+                              </p>
+                              <p
+                                 id="warningPasswordCharacters"
+                                 class="invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Your password must be at least 9 characters.
+                              </p>
                               <a
                                  href="#"
                                  type="button"
-                                 class="btn btn-success btn-block"
+                                 class="mt-5 btn btn-success btn-block"
                                  id="letsGo"
                               >
                                  Let's go!
@@ -108,16 +123,38 @@
                               <input
                                  class="form-control thick-border"
                                  type="text"
-                                 id="checkEmail2"
+                                 id="welcomeBackEmail"
                                  required
                               />
-
-                              <h4 class="text-muted">Password</h4>
+                              <p
+                                 id="warningWelcomeEmail"
+                                 class="mb-4 invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Please enter your email address.
+                              </p>
+                              <h4 class="text-muted mt-2">Password</h4>
                               <input
                                  class="form-control thick-border"
                                  type="password"
+                                 id="welcomePassword"
                                  required
                               />
+                              <p
+                                 id="warningWelcomePassword"
+                                 class="mb-4 invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Please enter your password.
+                              </p>
+                              <p
+                                 id="warningWelcomePasswordCharacters"
+                                 class="invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Your password must be at least 9 characters.
+                              </p>
+                              <!-- disable log in if email/ password fields are not accepted -->
                               <div class="float-right">
                                  <a
                                     href="create-answer.html"

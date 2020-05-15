@@ -190,6 +190,7 @@ textarea {
 }
 
 //checkbox styling
-.custom-control-input:checked ~ .custom-control-label::before {
+
+.custom-control-input:checked ~ .custom-control-label::after {
    background-color: $primary;
 }
