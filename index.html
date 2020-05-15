@@ -62,10 +62,18 @@
                            <div id="dragdown">
                               <h4 class="text-muted">Email address</h4>
                               <input
-                                 class="form-control thick-border mb-4"
+                                 class="form-control thick-border"
                                  type="text"
                                  required
+                                 id="email1"
                               />
+                              <p
+                                 id="warningEmail"
+                                 class="mb-4 invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Please enter a valid email address
+                              </p>
                               <h4 class="text-muted">Create a password</h4>
                               <input
                                  class="form-control thick-border mb-5"
@@ -73,9 +81,10 @@
                                  required
                               />
                               <a
-                                 href="create-answer.html"
+                                 href="#"
                                  type="button"
                                  class="btn btn-success btn-block"
+                                 id="letsGo"
                               >
                                  Let's go!
                               </a>
@@ -94,13 +103,15 @@
                            <p style="font-size: 13px;" class="mb-5">
                               Log in with your email address and password.
                            </p>
-                           <form>
+                           <form class="needs-validation">
                               <h4 class="text-muted">Email address</h4>
                               <input
-                                 class="form-control thick-border mb-4"
+                                 class="form-control thick-border"
                                  type="text"
+                                 id="checkEmail2"
                                  required
                               />
+
                               <h4 class="text-muted">Password</h4>
                               <input
                                  class="form-control thick-border"
@@ -110,8 +121,9 @@
                               <div class="float-right">
                                  <a
                                     href="create-answer.html"
-                                    type="button"
+                                    type="submit"
                                     class="btn btn-success mt-5 btn-lg"
+                                    id="logIn"
                                  >
                                     Log in
                                  </a>
