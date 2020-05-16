@@ -66,12 +66,18 @@
                <div class="mb-2">
                   <div class="card bg-secondary">
                      <div class="card-body">
-                        <textarea rows="7" autofocus="autofocus"></textarea>
+                        <textarea
+                           rows="7"
+                           autofocus="autofocus"
+                           id="textInput"
+                        ></textarea>
                      </div>
                   </div>
                </div>
                <!-- character count-->
-               <p class="float-right mb-5 text-muted">0/240</p>
+               <p class="float-right mb-4" id="overLimit">
+                  <span id="wordCount">0</span>/240
+               </p>
                <!-- create margin between card and buttons -->
                <div class="clearfix"></div>
 
@@ -79,8 +85,9 @@
                <a
                   href="create-imagery.html"
                   type="button"
-                  class="btn btn-outline-primary btn-lg"
+                  class="btn btn-outline-primary btn-lg disabled"
                   style="float: right;"
+                  id="nextButton"
                >
                   Next
                </a>

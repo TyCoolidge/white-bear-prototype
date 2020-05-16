@@ -64,7 +64,7 @@ $("#logIn").click(function () {
    if (emailWelcomeInput.length === 0) {
       $("#warningWelcomeEmail").show();
       $("#welcomeBackEmail").addClass("is-invalid");
-      $("#logIn").removeAttr("href");
+      // $("#logIn").removeAttr("href");
    } else {
       $("#welcomeBackEmail").removeClass("is-invalid");
       $("#welcomeBackEmail").addClass("is-valid");
@@ -87,6 +87,25 @@ $("#logIn").click(function () {
       $("#welcomePassword").removeClass("is-invalid");
       $("#welcomePassword").addClass("is-valid");
       $("#warningWelcomePasswordCharacters, #warningWelcomePassword").hide();
-      $("#logIn").addAttr("href");
    }
 });
+
+//javascript for create-answer.html id = textInput, wordCount, nextButton
+//when
+$("#textInput").keyup(function () {
+   $("#wordCount").text($(this).val().length); //this equals textInput
+   var validWordCount = $("#textInput").val();
+   if (validWordCount.length > 0 && validWordCount.length <= 240) {
+      $("#nextButton").removeClass("disabled");
+   } else {
+      $("#nextButton").addClass("disabled");
+   }
+   var limitReached = $("#textInput").val();
+   if (limitReached.length > 240) {
+      $("#overLimit").addClass("text-danger");
+   } else {
+      $("#overLimit").removeClass("text-danger");
+   }
+});
+
+/// test text ffgdsfdbsdbfdsbfdhsdfghfdhdfhdfhdfhdhsdfhhdshfdhfhsfdhhfhnfgshfghsfhghshfdghsfghfngnsfghdgfhfgngfndvvjnbvjhbjkvbvjavbdhj dj djh hdhdfjhjdfhj fhj j hdfj hdf jd sfjdh h sjhd vhjd hj sjh sfhj jhaf js fjhsd jf dsjhf ja fjhs fja jf dshf sdajhf dfsf
