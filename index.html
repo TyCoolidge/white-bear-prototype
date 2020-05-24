@@ -74,7 +74,7 @@
                               >
                                  Please enter your email address.
                               </p>
-                              <h4 class="text-muted">Create a password</h4>
+                              <h4 class="text-muted mt-2">Create a password</h4>
                               <input
                                  class="form-control thick-border mb-1"
                                  type="password"
@@ -83,17 +83,32 @@
                               />
                               <p
                                  id="warningPassword"
-                                 class="mb-4 invalid-feedback"
+                                 class="mb-3 invalid-feedback"
                                  style="display: none; font-size: 13px;"
                               >
                                  Please enter your password.
                               </p>
                               <p
                                  id="warningPasswordCharacters"
-                                 class="invalid-feedback"
+                                 class="invalid-feedback mb-1"
                                  style="display: none; font-size: 13px;"
                               >
                                  Your password must be at least 9 characters.
+                              </p>
+                              <p
+                                 id="noEmailPassword"
+                                 class="invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Your email address cannot be used in your
+                                 password.
+                              </p>
+                              <p
+                                 id="warningNoCommon"
+                                 class="invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Do not use a common password.
                               </p>
                               <a
                                  href="#"
