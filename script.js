@@ -379,25 +379,9 @@ $("#letsGo").click(function () {
       "zzzzxxxx",
       "zzzzzzz1",
    ];
-   var commonPw = commonPasswords.val(); //TODO filter out array to only have password greater than 8
-   Array.prototype.numFilter = function (greaterThanEight) {
-      var passWordsGreaterThanEight = []; /// empty array that results will be pushed into
-
-      for (
-         let i = 0;
-         i < commonPw.length;
-         i++ /// goes through each index of array
-      )
-         if (greaterThanEight(commonPw[i]))
-            // if input follows the parameters of being divisible by 4, then push those values into new array.
-            passWordsGreaterThanEight.push(commonPw[i]);
-      return passWordsGreaterThanEight;
-   };
-
-   var divideByFour = commonPw.numFilter(function (eight) {
-      //// this variable takes the array and filters out all strings greater than 8
-      return eight > 8; // whole function should filter out all passwords greater than 8
-   });
+   let passwordsGreaterThanEight = commonPasswords.filter(
+      (greaterEight) => greaterEight.length > 8
+   );
 
    if (passwordInput.length === 0) {
       $("#warningPassword").show();
@@ -412,16 +396,18 @@ $("#letsGo").click(function () {
       // if the password contains local part of email, then create error.
       $("#noEmailPassword").show();
       $("#requiredPassword").addClass("is-invalid");
-   } else if (passwordInput === divideByFour) {
+   } else if (passwordsGreaterThanEight.includes(passwordInput)) {
+      //TODO go back over
       /// if input is equal to any of the common pw greater than 8, display error
       /// if password matches common pw then display message
       $("#warningNoCommon").show();
       $("#requiredPassword").addClass("is-invalid");
+      $("#warningPassword").hide();
    } else {
       $("#requiredPassword").removeClass("is-invalid"); // if conditions are met, then make everything valid
       $("#requiredPassword").addClass("is-valid");
       $(
-         "#warningPasswordCharacters, #warningPassword, #noEmailPassword"
+         "#warningPasswordCharacters, #warningPassword, #noEmailPassword, #warningNoCommon"
       ).hide();
       isValidPassword = true;
    }
@@ -534,10 +520,11 @@ $("#save-imagery").click(function () {
    var idNumber = randomMilli + randNumberGenerator; /// log should show 6 digits (millis + randomnumber)
    var imageryCardSave = $("#imageryCard").val();
    var answerCardSave = $("#answerCard").val();
+   var set1 = ";,/?:@&=+$";
    console.log({
       _id: idNumber,
-      imagery: imageryCardSave,
-      answer: answerCardSave,
+      imagery: encodeURI(set1, imageryCardSave),
+      answer: encodeURI(set1, answerCardSave),
       levelNum: 1,
       successfulAttemptsNum: 0,
       createdOn: javascriptDate,
