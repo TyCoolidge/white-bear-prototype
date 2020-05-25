@@ -380,6 +380,24 @@ $("#letsGo").click(function () {
       "zzzzzzz1",
    ];
    var commonPw = commonPasswords.val(); //TODO filter out array to only have password greater than 8
+   Array.prototype.numFilter = function (greaterThanEight) {
+      var passWordsGreaterThanEight = []; /// empty array that results will be pushed into
+
+      for (
+         let i = 0;
+         i < commonPw.length;
+         i++ /// goes through each index of array
+      )
+         if (greaterThanEight(commonPw[i]))
+            // if input follows the parameters of being divisible by 4, then push those values into new array.
+            passWordsGreaterThanEight.push(commonPw[i]);
+      return passWordsGreaterThanEight;
+   };
+
+   var divideByFour = commonPw.numFilter(function (eight) {
+      //// this variable takes the array and filters out all strings greater than 8
+      return eight > 8; // whole function should filter out all passwords greater than 8
+   });
 
    if (passwordInput.length === 0) {
       $("#warningPassword").show();
@@ -394,7 +412,8 @@ $("#letsGo").click(function () {
       // if the password contains local part of email, then create error.
       $("#noEmailPassword").show();
       $("#requiredPassword").addClass("is-invalid");
-   } else if (passwordInput === commonPw) {
+   } else if (passwordInput === divideByFour) {
+      /// if input is equal to any of the common pw greater than 8, display error
       /// if password matches common pw then display message
       $("#warningNoCommon").show();
       $("#requiredPassword").addClass("is-invalid");
