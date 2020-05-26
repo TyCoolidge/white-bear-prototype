@@ -380,7 +380,7 @@ $("#letsGo").click(function () {
       "zzzzzzz1",
    ];
    let passwordsGreaterThanEight = commonPasswords.filter(
-      (greaterEight) => greaterEight.length > 8
+      (greaterEight) => greaterEight.length > 8 // the password list will be filtered out into a new array that only contains passwords greater than 8
    );
 
    if (passwordInput.length === 0) {
@@ -482,6 +482,14 @@ $("#textInput").keyup(function () {
 
 $("#save-imagery").click(function () {
    $("#overlay-success").toggleClass("d-flex d-none");
+   $("#create-error").click(function () {
+      $("#overlay-danger").toggleClass("d-flex d-none");
+   });
+
+   $("#deleteCard").hide(),
+      $("#customCheck").click(function () {
+         $("#deleteCard").toggle("#deleteCard");
+      });
    /////// copy and paste from index page
    var currentYear = new Date().getYear().toString().substr(-2); /// gets 4 digit year but takes the last two digits
    var currentMonth = new Date().getMonth() + 1; // adds one to the zero-index counter of dates
@@ -518,25 +526,17 @@ $("#save-imagery").click(function () {
    var randomMilli = new Date().getMilliseconds().toString().padStart(3, "0"); //https://stackoverflow.com/a/50110996 will always produce 3 digits
    var randNumberGenerator = Math.floor(Math.random() * 900) + 100; //https://stackoverflow.com/a/43914168 // should generate random number betweeen 000-999
    var idNumber = randomMilli + randNumberGenerator; /// log should show 6 digits (millis + randomnumber)
-   var imageryCardSave = $("#imageryCard").val();
-   var answerCardSave = $("#answerCard").val();
-   var set1 = ";,/?:@&=+$";
    console.log({
       _id: idNumber,
-      imagery: encodeURI(set1, imageryCardSave),
-      answer: encodeURI(set1, answerCardSave),
+      imagery: encodeURI(
+         "A delicious shishkebab but the first bite of meat after the pointy end is spicy & makes an exclamation point appear over my head like in a JRPG."
+      ),
+      answer: encodeURIComponent(
+         "The syntax for making a comment in HTML is <!-- Mike's comment here -->"
+      ),
       levelNum: 1,
       successfulAttemptsNum: 0,
       createdOn: javascriptDate,
       lastAttemptedOn: javascriptDate, // same as createdOn
    }); //TODO!!!!!!!!!! Add word counter to create imagery page, also disable save button
 });
-
-$("#create-error").click(function () {
-   $("#overlay-danger").toggleClass("d-flex d-none");
-});
-
-$("#deleteCard").hide(),
-   $("#customCheck").click(function () {
-      $("#deleteCard").toggle("#deleteCard");
-   });
