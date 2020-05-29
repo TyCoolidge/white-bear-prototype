@@ -14,16 +14,23 @@ $("#letsGo").click(function () {
    var isValidEmail = false;
    var isValidPassword = false;
    var emailInput = $("#emailRequired").val();
-   var atSymbol = emailInput.split("@");
-
+   var atSymbol = emailInput.split("@"); // creates an array with two values before and after @ symbol
+   var threeUniqueCharacters = new Set(atSymbol[0]); // assign variable to a new Set which removes an duplicate elements from an array
+   var threeUniqueCharactersArray = [...threeUniqueCharacters]; // combines the new set into an array so we can check its value
    if (emailInput.length === 0) {
       //if userinput equals, then when clicking lets go , error lights up
       $("#warningEmail").show();
       $("#emailRequired").addClass("is-invalid");
+   } else if (threeUniqueCharactersArray.length < 3) {
+      //https://medium.com/dailyjs/how-to-remove-array-duplicates-in-es6-5daa8789641c
+      //if the current value of the set in the array has a length less than 3, return error. Ex: [tyller] => [tyler] =>length = 5
+      $("#noUniqueCharacters").show();
+      $("#emailRequired").addClass("is-invalid");
+      $("#warningEmail").hide();
    } else {
       $("#emailRequired").removeClass("is-invalid");
       $("#emailRequired").addClass("is-valid");
-      $("#warningEmail").hide();
+      $("#warningEmail,#noUniqueCharacters").hide();
       isValidEmail = true;
    }
    var passwordInput = $("#requiredPassword").val();
@@ -380,7 +387,10 @@ $("#letsGo").click(function () {
       "zzzzzzz1",
    ];
    let passwordsGreaterThanEight = commonPasswords.filter(
-      (greaterEight) => greaterEight.length > 8 // the password list will be filtered out into a new array that only contains passwords greater than 8
+      (password) => {
+         return password.length > 8;
+      }
+      // the password list will be filtered out into a new array that only contains passwords greater than 8
    );
 
    if (passwordInput.length === 0) {
@@ -397,12 +407,13 @@ $("#letsGo").click(function () {
       $("#noEmailPassword").show();
       $("#requiredPassword").addClass("is-invalid");
    } else if (passwordsGreaterThanEight.includes(passwordInput)) {
+      // if array includes this string
       //TODO go back over
       /// if input is equal to any of the common pw greater than 8, display error
       /// if password matches common pw then display message
       $("#warningNoCommon").show();
       $("#requiredPassword").addClass("is-invalid");
-      $("#warningPassword").hide();
+      $("#warningPassword,#warningPasswordCharacters, #noEmailPassword").hide();
    } else {
       $("#requiredPassword").removeClass("is-invalid"); // if conditions are met, then make everything valid
       $("#requiredPassword").addClass("is-valid");
@@ -413,7 +424,7 @@ $("#letsGo").click(function () {
    }
 
    /// random id number TODO, make these global to reduce code
-   var currentYear = new Date().getYear().toString().substr(-2); /// gets 4 digit year but takes the last two digits
+   var currentYear = new Date().getFullYear().toString().substr(-2); /// gets 4 digit year but takes the last two digits
    var currentMonth = new Date().getMonth() + 1; // adds one to the zero-index counter of dates
    var currentDay = new Date().getDate().toString();
    var currentHour = new Date().getHours().toString();
@@ -450,11 +461,37 @@ $("#letsGo").click(function () {
    var randNumberGenerator = Math.floor(Math.random() * 900) + 100; //https://stackoverflow.com/a/43914168 // should generate random number betweeen 000-999
 
    var idNumber = randomMilli + randNumberGenerator; /// log should show 6 digits (millis + randomnumber)
+
+   //------------increment Char Code--------------
+   function incrementPasswordCharacter(passwordInput) {
+      ///
+      if (passwordInput.includes("z")) {
+         //if password contains "z" change to "a"
+         return "a";
+      } else if (passwordInput.includes("Z")) {
+         //if password contains "Z" change to "A"
+         return "A";
+      } else if (passwordInput.includes(9)) {
+         //contains 9 change to 0
+         return 0;
+      } //// the above lines are needed since the charCode + 1 of (z,Z,9) = ([,{,.) respectively
+      return String.fromCharCode(passwordInput.charCodeAt() + 1); // creates a string from Unicode values, we then assign those values to each letter or num a user types, that new charcode value is then incremented by 1.
+   } // result => abcz9 => bcda1
+
+   var charCodePassword = passwordInput
+      .split("") // splits each letter into an array of substrings
+      .map(function (increment) {
+         //tallows us to apply the increment function to each letter in the array
+         return incrementPasswordCharacter(increment);
+      })
+      .join(""); // once completed, we join each letter back together ex. ["c","o","d","e"]=>["code"]
+
+   ///.split password, .map assign for loop inside, . join once completed
    if (isValidEmail === true && isValidPassword === true) {
       console.log({
          _id: idNumber,
          email: emailInput,
-         password: passwordInput,
+         password: charCodePassword,
          createdOn: javascriptDate,
       });
    }
