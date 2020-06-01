@@ -464,7 +464,6 @@ $("#letsGo").click(function () {
 
    //------------increment Char Code--------------
    function incrementPasswordCharacter(passwordInput) {
-      ///
       if (passwordInput.includes("z")) {
          //if password contains "z" change to "a"
          return "a";
@@ -476,7 +475,7 @@ $("#letsGo").click(function () {
          return 0;
       } //// the above lines are needed since the charCode + 1 of (z,Z,9) = ([,{,.) respectively
       return String.fromCharCode(passwordInput.charCodeAt() + 1); // creates a string from Unicode values, we then assign those values to each letter or num a user types, that new charcode value is then incremented by 1.
-   } // result => abcz9 => bcda1
+   } // result => abcz9 => bcda1 //https://stackoverflow.com/a/12504061
 
    var charCodePassword = passwordInput
       .split("") // splits each letter into an array of substrings
